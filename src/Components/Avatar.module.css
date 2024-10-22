@@ -1,0 +1,12 @@
+.Avatar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+    border: 4px solid var(--gray-800);
+}
+
+.AvatarWithBorder{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+}
