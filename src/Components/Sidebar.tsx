@@ -22,9 +22,10 @@ export function Sidebar() {
   const [novaFoto, setNovaFoto] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  // Função para alternar o modal
+  // Função para alternar o modal e ativar o modo de edição
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+    setEditando(!editando); // Alterna o estado de edição
   };
 
   // Função para lidar com a submissão do formulário de edição
@@ -33,7 +34,7 @@ export function Sidebar() {
     if (novaFoto) {
       setUserInfo({ ...userInfo, foto: novaFoto });
     }
-    setEditando(false);
+    setEditando(false); // Desativa o modo de edição
     toggleModal(); // Fecha o modal
   };
 
@@ -71,7 +72,7 @@ export function Sidebar() {
       <footer>
         <a href="#" onClick={toggleModal}>
           <PencilLine size={20} />
-          Editar seu perfil
+          {editando ? "Salvando perfil..." : "Editar seu perfil"}
         </a>
       </footer>
 
