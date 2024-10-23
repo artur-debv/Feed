@@ -52,16 +52,6 @@
     color: #c0392b; /* Cor mais escura ao passar o mouse */
 }
 
-/* Novo avatar a ser exibido no modal */
-.newAvatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover; /* Garante que a imagem se ajuste dentro da borda */
-    margin-top: 15px; /* Mais espaço acima da imagem */
-    border: 3px solid #3498db; /* Borda azul ao redor da imagem */
-}
-
 /* Estilos para os inputs dentro do modal */
 .input {
     width: 100%;
@@ -76,6 +66,13 @@
 .input:focus {
     border-color: #3498db; /* Cor da borda ao focar */
     outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilos para os botões no modal */
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    margin-top: 20px; /* Espaço acima dos botões */
 }
 
 /* Botão de salvar */
