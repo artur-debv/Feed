@@ -159,16 +159,17 @@
   .uploadLabel {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #1c1c1c; /* Cor preta opaca como a do Opera */
-    color: #ffffff; /* Texto branco */
-    border-radius: 8px; /* Bordas arredondadas */
-    font-size: 14px; /* Tamanho de fonte ligeiramente maior */
+    background-color: #1c1c1c; 
+    color: #ffffff; 
+    border-radius: 8px; 
+    font-size: 14px; 
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s; /* Transições suaves */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    transition: background-color 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 20px;
   }
   
   .uploadLabel:hover {
-    background-color: #4b4b4b; /* Cor de hover um pouco mais clara */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    background-color: #4b4b4b; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
   }
