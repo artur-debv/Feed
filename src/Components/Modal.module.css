@@ -5,41 +5,64 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Fundo semitransparente */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fundo semitransparente com mais opacidade */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    /* Certifique-se de que o modal esteja acima de outros elementos */
+    /* Modal acima de outros elementos */
+    animation: fadeIn 0.3s ease;
+    /* Animação de entrada */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Conteúdo do modal em si */
 .modalContent {
-    background-color: white;
+    background-color: #ffffff;
     /* Fundo branco para o modal */
-    padding: 20px;
-    border-radius: 10px;
-    /* Bordas arredondadas */
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
-    /* Sombra para dar profundidade */
+    padding: 30px;
+    /* Mais espaço */
+    border-radius: 15px;
+    /* Bordas mais arredondadas */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    /* Sombra mais intensa */
     max-width: 500px;
-    width: 100%;
+    width: 90%;
+    /* Ajusta-se melhor em telas pequenas */
     position: relative;
     z-index: 1100;
+    /* Garantir que fique acima do backdrop */
 }
 
 /* Botão de fechar o modal */
 .closeButton {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    /* Aumentar o tamanho do botão de fechar */
     cursor: pointer;
-    color: #333;
-    /* Cor do botão de fechar */
+    color: #e74c3c;
+    /* Cor vibrante para o botão de fechar */
+    transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+    color: #c0392b;
+    /* Cor mais escura ao passar o mouse */
 }
 
 /* Novo avatar a ser exibido no modal */
@@ -49,35 +72,41 @@
     border-radius: 50%;
     object-fit: cover;
     /* Garante que a imagem se ajuste dentro da borda */
-    margin-top: 10px;
-    border: 2px solid #ccc;
-    /* Pequena borda para destacar a imagem */
+    margin-top: 15px;
+    /* Mais espaço acima da imagem */
+    border: 3px solid #3498db;
+    /* Borda azul ao redor da imagem */
 }
 
 /* Estilos para os inputs dentro do modal */
 .input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
+    padding: 12px;
+    /* Um pouco mais de espaço no padding */
+    margin-bottom: 20px;
+    /* Mais espaço entre os inputs */
+    border: 2px solid #ddd;
+    /* Borda mais grossa */
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
 .input:focus {
-    border-color: #007bff;
+    border-color: #3498db;
     /* Cor da borda ao focar */
     outline: none;
+    /* Remove o contorno padrão */
 }
 
 /* Botão de salvar */
 .saveButton {
-    background-color: #007bff;
+    background-color: #3498db;
     /* Cor do botão salvar */
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
+    /* Aumentar padding */
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
@@ -85,7 +114,7 @@
 }
 
 .saveButton:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
     /* Cor ao passar o mouse */
 }
 
@@ -95,13 +124,16 @@
     /* Cor neutra para o botão de cancelar */
     color: #333;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
+    /* Aumentar padding */
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
     margin-left: 10px;
+    /* Espaçamento entre os botões */
 }
 
 .cancelButton:hover {
     background-color: #e0e0e0;
+    /* Cor ao passar o mouse */
 }
