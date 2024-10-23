@@ -110,3 +110,7 @@
     transform: translateY(0); /* Retorna à posição original ao clicar */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra reduzida ao clicar */
 }
+
+.styles.containers{
+    display: flex;
+}

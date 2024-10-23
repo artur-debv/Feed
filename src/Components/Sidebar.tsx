@@ -102,12 +102,14 @@ export function Sidebar() {
             className={styles.input}
           />
           {novaFoto && <img src={novaFoto} alt="Nova foto de perfil" className={styles.newAvatar} />}
+          <div className={styles.containers}>
           <button type="submit" className={styles.saveButton}>
             Salvar
           </button>
           <button type="button" onClick={toggleModal} className={styles.cancelButton}>
             Cancelar
           </button>
+          </div>
         </form>
       </Modal>
     </aside>
