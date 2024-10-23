@@ -101,14 +101,21 @@ export function Sidebar() {
             onChange={handleFileChange}
             className={styles.inputUpload}
           />
+          <label
+            htmlFor="upload"
+            className={styles.uploadLabel}
+          >
+            Upload Image
+          </label>
+
           {novaFoto && <img src={novaFoto} alt="Nova foto de perfil" className={styles.newAvatar} />}
           <div className={styles.containers}>
-          <button type="submit" className={styles.saveButton}>
-            Salvar
-          </button>
-          <button type="button" onClick={toggleModal} className={styles.cancelButton}>
-            Cancelar
-          </button>
+            <button type="submit" className={styles.saveButton}>
+              Salvar
+            </button>
+            <button type="button" onClick={toggleModal} className={styles.cancelButton}>
+              Cancelar
+            </button>
           </div>
         </form>
       </Modal>
