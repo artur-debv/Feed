@@ -2,7 +2,7 @@ import { PencilLine } from "phosphor-react";
 import { useState, ChangeEvent, FormEvent } from "react";
 import { Avatar } from "./Avatar";
 import { Modal } from "./Modal";
-import styles from "./modal.module.css";
+import styles from "./Sidebar.module.css";
 
 // Tipagem para as informações do usuário
 interface UserInfo {
