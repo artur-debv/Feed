@@ -99,7 +99,7 @@ export function Sidebar() {
             type="file"
             accept="image/*"
             onChange={handleFileChange}
-            className={styles.input}
+            className={styles.inputUpload}
           />
           {novaFoto && <img src={novaFoto} alt="Nova foto de perfil" className={styles.newAvatar} />}
           <div className={styles.containers}>
