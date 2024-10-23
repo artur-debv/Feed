@@ -1,0 +1,107 @@
+/* Fundo de tela que escurece o restante da interface */
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Certifique-se de que o modal esteja acima de outros elementos */
+}
+
+/* Conteúdo do modal em si */
+.modalContent {
+    background-color: white;
+    /* Fundo branco para o modal */
+    padding: 20px;
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidade */
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 1100;
+}
+
+/* Botão de fechar o modal */
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    /* Cor do botão de fechar */
+}
+
+/* Novo avatar a ser exibido no modal */
+.newAvatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Garante que a imagem se ajuste dentro da borda */
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    /* Pequena borda para destacar a imagem */
+}
+
+/* Estilos para os inputs dentro do modal */
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #007bff;
+    /* Cor da borda ao focar */
+    outline: none;
+}
+
+/* Botão de salvar */
+.saveButton {
+    background-color: #007bff;
+    /* Cor do botão salvar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.saveButton:hover {
+    background-color: #0056b3;
+    /* Cor ao passar o mouse */
+}
+
+/* Botão de cancelar */
+.cancelButton {
+    background-color: #f0f0f0;
+    /* Cor neutra para o botão de cancelar */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.cancelButton:hover {
+    background-color: #e0e0e0;
+}
