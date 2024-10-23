@@ -153,3 +153,39 @@
     outline: none;
     /* Remove o contorno padrão */
 }
+
+/* Esconda o input de arquivo padrão */
+.inputUpload {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Botão personalizado */
+.customFileButton {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.customFileButton:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo opcional para quando o arquivo é selecionado */
+.customFileButton:after {
+    content: "Nenhum arquivo selecionado";
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
