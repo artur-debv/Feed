@@ -5,15 +5,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Fundo semitransparente com mais opacidade */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    /* Modal acima de outros elementos */
-    animation: fadeIn 0.3s ease;
-    /* Animação de entrada */
+    z-index: 1000; /* Modal acima de outros elementos */
+    animation: fadeIn 0.3s ease; /* Animação de entrada */
 }
 
 /* Animação de fade-in */
@@ -21,7 +18,6 @@
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -29,20 +25,14 @@
 
 /* Conteúdo do modal em si */
 .modalContent {
-    background-color: #ffffff;
-    /* Fundo branco para o modal */
-    padding: 30px;
-    /* Mais espaço */
-    border-radius: 15px;
-    /* Bordas mais arredondadas */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    /* Sombra mais intensa */
+    background-color: #ffffff; /* Fundo branco para o modal */
+    padding: 30px; /* Mais espaço */
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
     max-width: 500px;
-    width: 90%;
-    /* Ajusta-se melhor em telas pequenas */
+    width: 90%; /* Ajusta-se melhor em telas pequenas */
     position: relative;
-    z-index: 1100;
-    /* Garantir que fique acima do backdrop */
+    z-index: 1100; /* Garantir que fique acima do backdrop */
 }
 
 /* Botão de fechar o modal */
@@ -52,17 +42,14 @@
     right: 15px;
     background: none;
     border: none;
-    font-size: 1.8rem;
-    /* Aumentar o tamanho do botão de fechar */
+    font-size: 1.8rem; /* Aumentar o tamanho do botão de fechar */
     cursor: pointer;
-    color: #e74c3c;
-    /* Cor vibrante para o botão de fechar */
+    color: #e74c3c; /* Cor vibrante para o botão de fechar */
     transition: color 0.3s ease;
 }
 
 .closeButton:hover {
-    color: #c0392b;
-    /* Cor mais escura ao passar o mouse */
+    color: #c0392b; /* Cor mais escura ao passar o mouse */
 }
 
 /* Novo avatar a ser exibido no modal */
@@ -70,70 +57,70 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    object-fit: cover;
-    /* Garante que a imagem se ajuste dentro da borda */
-    margin-top: 15px;
-    /* Mais espaço acima da imagem */
-    border: 3px solid #3498db;
-    /* Borda azul ao redor da imagem */
+    object-fit: cover; /* Garante que a imagem se ajuste dentro da borda */
+    margin-top: 15px; /* Mais espaço acima da imagem */
+    border: 3px solid #3498db; /* Borda azul ao redor da imagem */
 }
 
 /* Estilos para os inputs dentro do modal */
 .input {
     width: 100%;
-    padding: 12px;
-    /* Um pouco mais de espaço no padding */
-    margin-bottom: 20px;
-    /* Mais espaço entre os inputs */
-    border: 2px solid #ddd;
-    /* Borda mais grossa */
+    padding: 12px; /* Um pouco mais de espaço no padding */
+    margin-bottom: 20px; /* Mais espaço entre os inputs */
+    border: 2px solid #ddd; /* Borda mais grossa */
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
 .input:focus {
-    border-color: #3498db;
-    /* Cor da borda ao focar */
-    outline: none;
-    /* Remove o contorno padrão */
+    border-color: #3498db; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
 }
 
 /* Botão de salvar */
 .saveButton {
-    background-color: #3498db;
-    /* Cor do botão salvar */
+    background-color: #3498db; /* Cor do botão salvar */
     color: white;
     border: none;
-    padding: 12px 25px;
-    /* Aumentar padding */
+    padding: 12px 25px; /* Aumentar padding */
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
 }
 
 .saveButton:hover {
-    background-color: #2980b9;
-    /* Cor ao passar o mouse */
+    background-color: #2980b9; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão */
+}
+
+.saveButton:active {
+    transform: translateY(0); /* Retorna à posição original ao clicar */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra reduzida ao clicar */
 }
 
 /* Botão de cancelar */
 .cancelButton {
-    background-color: #f0f0f0;
-    /* Cor neutra para o botão de cancelar */
+    background-color: #f0f0f0; /* Cor neutra para o botão de cancelar */
     color: #333;
     border: none;
-    padding: 12px 25px;
-    /* Aumentar padding */
+    padding: 12px 25px; /* Aumentar padding */
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    margin-left: 10px;
-    /* Espaçamento entre os botões */
+    margin-left: 10px; /* Espaçamento entre os botões */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
 }
 
 .cancelButton:hover {
-    background-color: #e0e0e0;
-    /* Cor ao passar o mouse */
+    background-color: #e0e0e0; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão */
+}
+
+.cancelButton:active {
+    transform: translateY(0); /* Retorna à posição original ao clicar */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra reduzida ao clicar */
 }
