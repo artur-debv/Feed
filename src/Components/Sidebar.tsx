@@ -95,10 +95,12 @@ export function Sidebar() {
             placeholder="Cargo"
             className={styles.input}
           />
+
           <input
             type="file"
             accept="image/*"
             onChange={handleFileChange}
+            id="upload"
             className={styles.inputUpload}
           />
           <label
