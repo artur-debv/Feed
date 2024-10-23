@@ -71,7 +71,7 @@ export function Sidebar() {
 
       <footer>
         <a href="#" onClick={toggleModal}>
-          <PencilLine size={20} />
+          <PencilLine size={18} />
           {editando ? "Salvando perfil..." : "Editar seu perfil"}
         </a>
       </footer>
